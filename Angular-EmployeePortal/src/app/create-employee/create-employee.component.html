@@ -1,0 +1,106 @@
+<!--<h3>Create Employee</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">First Name</label>
+      <input type="text" class="form-control" id="firstName" required [(ngModel)]="employee.firstName" name="firstName">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Last Name</label>
+      <input type="text" class="form-control" id="lastName" required [(ngModel)]="employee.lastName" name="lastName">
+    </div>
+
+    <div class="form-group">
+      <label for="name">First Name</label>
+      <input type="text" class="form-control" id="emailId" required [(ngModel)]="employee.emailId" name="emailId">
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+   <button class="btn btn-success" (click)="newEmployee()">Add</button>
+</div> -->
+
+
+<div [hidden]="submitted" style="width: 400px;">
+  <form #userForm="ngForm" (ngSubmit)="onSubmit()">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">Create Employee</h3>
+      </div>
+      <div class="panel-body">
+        <div class="form-group">
+          <label for="name">First Name</label>
+          <input type="text" class="form-control" #userName="ngModel" id="firstName" required
+            [(ngModel)]="employee.firstName" name="firstName">
+          <div *ngIf="userName.errors && (userName.dirty || userName.touched)">
+            <div [hidden]="!userName.errors.required" class="alert alert-danger">
+              Name is required
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="name">Last Name</label>
+          <input type="text" class="form-control" #LastName="ngModel" id="lastName" required
+            [(ngModel)]="employee.lastName" name="lastName">
+          <div *ngIf="LastName.errors && (LastName.dirty || LastName.touched)">
+            <div [hidden]="!LastName.errors.required" class="alert alert-danger">
+              Last Name is required
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Gender</label>
+          <div class="form-control">
+            <label class="radio-inline">
+              <input type="radio" name="gender" value="male" [(ngModel)]="employee.gender">
+              Male
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="gender" value="female" [(ngModel)]="employee.gender">
+              Female
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="dob">Date of Birth</label>
+          <input type="text" bsDatepicker class="form-control" #DOB="ngModel" id="dob" required
+            [(ngModel)]="employee.dob" name="dob">
+          <div *ngIf="DOB.errors && (DOB.dirty || DOB.touched)">
+            <div [hidden]="!DOB.errors.required" class="alert alert-danger">
+              Date of Birth is required
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="dept">Department</label>
+          <input type="text" class="form-control" #Dept="ngModel" id="dept" required
+            [(ngModel)]="employee.department" name="department">
+          <div *ngIf="Dept.errors && (Dept.dirty || Dept.touched)">
+            <div [hidden]="!Dept.errors.required" class="alert alert-danger">
+              Department is required
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="panel-footer">
+        <button type="submit" [disabled]="userForm.form.invalid" class="btn btn-primary">submit</button>
+      </div>
+
+    </div>
+
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+</div>
