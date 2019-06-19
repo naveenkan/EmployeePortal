@@ -34,7 +34,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ### 1. You can clone it from github by running following command
 
 ```
-  $ git clone https://github.com/niteshsinghrajput/CRUD-Spring-Boot-JPA-MySQL.git
+  $ git clone https://github.com/naveenkan/EmployeePortal.git
 ### 2. Import project into eclipse
 ```
   File -> Import -> Maven -> Existing Maven Projects -> Browse Project from cloned location
@@ -47,8 +47,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 can call following Endpoints by using swagger or browser or postman
 
 Enter the following urls's in a browser
- http://localhost:2021/api/v1employees -To get all Employees
+ http://localhost:2021/api/v1/employees -To get all Employees
  http://localhost:2021/api/v1employees/1
+ 
 #Swagger 2 UI
 http://localhost:2021/swagger-ui.html#/ -- Shows the list of Endpoints in the current RESTful webservice.
 
