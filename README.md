@@ -1,6 +1,9 @@
-# Angular6SpringbootClient
+# Angular7 Employee Portal
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.1.
+
+## To run Appliction:
+Do 'npm start'
 
 ## Development server
 
@@ -25,4 +28,28 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+
+### 1. You can clone it from github by running following command
+
+```
+  $ git clone https://github.com/niteshsinghrajput/CRUD-Spring-Boot-JPA-MySQL.git
+### 2. Import project into eclipse
+```
+  File -> Import -> Maven -> Existing Maven Projects -> Browse Project from cloned location
+```
+### 3. Right click on project in eclipse and then Maven -> Update Projects 
+
+### 4. Right click on Application.java file and run as Java Application
+
+## Once Sprint Boot Application will be started successfully then we 
+can call following Endpoints by using swagger or browser or postman
+
+Enter the following urls's in a browser
+ http://localhost:2021/api/v1employees -To get all Employees
+ http://localhost:2021/api/v1employees/1
+#Swagger 2 UI
+http://localhost:2021/swagger-ui.html#/ -- Shows the list of Endpoints in the current RESTful webservice.
+
 
